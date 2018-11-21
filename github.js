@@ -1,3 +1,4 @@
+'use strict';
 class GitHub {
   constructor() {
     this.client_id = '91c20f9143350c5a15cb';
