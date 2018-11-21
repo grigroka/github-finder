@@ -5,6 +5,9 @@ class UI {
   }
 
   showProfile(user) {
+    const formatedCreatedAtDate = new Date(
+      user.created_at
+    ).toLocaleDateString();
     this.profile.innerHTML = `
       <div class="card card-body mb-3">
         <div class="row">
@@ -30,7 +33,7 @@ class UI {
               <li class="list-group-item">Company: ${user.company}</li>
               <li class="list-group-item">Website/Blog: ${user.blog}</li>
               <li class="list-group-item">Location: ${user.location}</li>
-              <li class="list-group-item">Member Since: ${user.created_at}</li>
+              <li class="list-group-item">Member Since: ${formatedCreatedAtDate}</li>
             </ul>
           </div>
         </div>
